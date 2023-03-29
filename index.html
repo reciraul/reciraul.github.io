@@ -14,17 +14,17 @@
         <div id="my-picture"><img src="clar.PNG" alt="Selfie" /></div>
         <div>
           <h1>Raul Reci</h1>
-          <h2>
+          <h2 id="job-title">
             Junior Frontend Developer
             <span style="color: #00ced1">@TEC:Agency</span>
           </h2>
         </div>
       </div>
       <ul id="top-menu-bar">
-        <li><a href="">Home</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" onclick="showSkills()">Skills</a></li>
+        <li><a href="#" onclick="showProjects()">Projects</a></li>
+        <li><a href="#" onclick="showLanguages()">Languages</a></li>
       </ul>
     </header>
 
@@ -46,12 +46,18 @@
         </section>
         <section>M2</section>
       </div>
-      <div id="main">Main</div>
+      <div id="main">
+        <div class="page" id="home">Home content</div>
+        <div class="page" id="skills">Skills content</div>
+        <div class="page" id="projects">Projects content</div>
+        <div class="page" id="languages">Languages content</div>
+      </div>
     </section>
 
     <footer>
       <a href="">Linkedin</a>
     </footer>
     <script src="examples.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
