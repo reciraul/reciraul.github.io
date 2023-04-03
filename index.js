@@ -3,11 +3,11 @@ var activePage = "home";
 var homePage = document.getElementById(activePage);
 homePage.style.display = "block";
 
-function hidePage(id) {
+function hide(id) {
   document.getElementById(id).style.display = "none";
 }
 
-function showPage(id) {
+function show(id) {
   document.getElementById(id).style.display = "block";
 }
 
@@ -18,22 +18,7 @@ function hideAllPages() {
   hidePage("home");
 }
 
-function showHome() {
+function showPage(id) {
   hideAllPages();
-  showPage("home");
-}
-
-function showSkills() {
-  hideAllPages();
-  showPage("skills");
-}
-
-function showProjects() {
-  hideAllPages();
-  showPage("projects");
-}
-
-function showLanguages() {
-  hideAllPages();
-  showPage("languages");
+  show(id);
 }
