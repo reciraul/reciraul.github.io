@@ -11,30 +11,29 @@ function showPage(id) {
   document.getElementById(id).style.display = "block";
 }
 
-function showHome() {
+function hideAllPages() {
   hidePage("skills");
   hidePage("projects");
   hidePage("languages");
+  hidePage("home");
+}
+
+function showHome() {
+  hideAllPages();
   showPage("home");
 }
 
 function showSkills() {
-  hidePage("home");
-  hidePage("projects");
-  hidePage("languages");
+  hideAllPages();
   showPage("skills");
 }
 
 function showProjects() {
-  hidePage("skills");
-  hidePage("languages");
-  hidePage("home");
+  hideAllPages();
   showPage("projects");
 }
 
 function showLanguages() {
-  hidePage("skills");
-  hidePage("projects");
-  hidePage("home");
+  hideAllPages();
   showPage("languages");
 }
