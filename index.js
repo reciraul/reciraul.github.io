@@ -12,10 +12,10 @@ function show(id) {
 }
 
 function hideAllPages() {
-  hidePage("skills");
-  hidePage("projects");
-  hidePage("languages");
-  hidePage("home");
+  var pages = ["home", "skills", "projects", "languages"];
+  pages.forEach(function (page) {
+    hide(page);
+  });
 }
 
 function showPage(id) {
