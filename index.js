@@ -43,7 +43,13 @@ function showSkills(skills) {
     } */
     var cls = skill.endorcements > 4 ? "important" : "";
     if (skill.endorcements > 4)
-      return `<li class="${cls}">${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
+      return `<li class="${cls}">
+        ${skill.name} ${
+        skill.endorcements < 2
+          ? ""
+          : `- <span class="endorcements">${skill.endorcements}</span>`
+      }
+           </li>`;
   });
 
   var container = document.querySelector("#skills ul");
