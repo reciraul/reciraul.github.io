@@ -29,12 +29,7 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
   }
 });
 
-function showSkills() {
-  var skills = [
-    { name: "HTML", endorcements: 5 },
-    { name: "CSS", endorcements: 6 },
-    { name: "JS", endorcements: 7 },
-  ];
+function showSkills(skills) {
   var html = skills.map(function (skill) {
     return `<li>${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
   });
@@ -43,4 +38,14 @@ function showSkills() {
   container.innerHTML = html.join("");
 }
 
-showSkills();
+fetch("skills.json")
+  .then(function (r) {
+    return r.json();
+    //  .then(function (r2) {
+    //   console.warn("r2", r2);
+    // });
+  })
+  .then(function (skills) {
+    console.warn("skills", skills);
+    showSkills(skills);
+  });
