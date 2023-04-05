@@ -41,9 +41,9 @@ function showSkills(skills) {
     if (skill.endorcements > 4) {
       cls = 'class="important"';
     } */
-    var cls = skill.endorcements > 4 ? 'class="important"' : "";
+    var cls = skill.endorcements > 4 ? "important" : "";
     if (skill.endorcements > 4)
-      return `<li ${cls}>${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
+      return `<li class="${cls}">${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
   });
 
   var container = document.querySelector("#skills ul");
