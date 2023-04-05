@@ -92,3 +92,11 @@ h1 {
 .endorcements {
   color: gray;
 }
+
+.important {
+  font-weight: bold;
+}
+
+li.important .endorcements {
+  color: green;
+}
